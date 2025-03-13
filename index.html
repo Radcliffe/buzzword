@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzzword</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>🐝 Buzzword 🐝</h1>
+        
+
+        <div class="game" id="game">
+
+            <div class="hive active" id="hive">
+                <div class="cell"><div class="letter">L</div></div>
+                <div class="cell"><div class="letter">A</div></div>
+                <div class="cell"><div class="letter">D</div></div>
+                <div class="cell"><div class="letter">I</div></div>
+                <div class="cell"><div class="letter">O</div></div> 
+                <div class="cell"><div class="letter">N</div></div>
+                <div class="cell"><div class="letter">G</div></div>
+            </div>
+        </div>
+
+        <div class="current-guess" id="current-guess"></div>
+
+        <div class="controls">
+            <button id="delete">Delete</button>
+            <button id="shuffle">Shuffle</button>
+            <button id="enter">Enter</button>
+        </div>
+  
+    <p><strong>Instructions:</strong> Click on the hexagonal cells to form a word
+    using all seven letters. Letters can be used more than once. There is a new puzzle
+    each day.</p>
+    </div>
+    <script src="words.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

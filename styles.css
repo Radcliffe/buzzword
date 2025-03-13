@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+h1 {
+    color: #b51e23;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.game {
+    display: flex;
+    --s: 100px;  /* size  */
+    --m: 4px;    /* margin */
+    --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  }
+  
+  .hive {
+    font-size: 0; /*disable white space between inline block element */
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+  
+  .hive .cell {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s)*1.1547); 
+    display: inline-block;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background: goldenrod;
+    margin-bottom: calc(var(--m) - var(--s)*0.2885);
+    cursor: pointer;
+  }
+
+  .hive .cell:first-child {
+    transform: translate(162px, -93px);
+  }
+
+  .hive .cell:nth-child(5) {
+    transform: translate(-162px, -93px);
+  }
+
+  .hive.active .cell:hover {
+    background: chocolate;
+  }
+
+  .letter {
+    margin-top: 30px;
+    font-size: 48px;
+    color: white;
+  }
+
+  button {
+    background-color: chocolate; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px; 
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .current-guess {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    height: 54px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .current-guess.correct {
+    color: goldenrod;
+    font-weight: bolder;
+    transition: font-weight 2s ease-in-out, color 2s ease-in-out;
+  }
+
+  .current-guess.incorrect {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
