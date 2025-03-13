@@ -9,7 +9,7 @@ let gameOver = false;
 
 shuffleButton.addEventListener('click', shuffleLetters);
 
-let wordIndex = Math.floor(date.getTime() / 86400000) % wordList.length;
+let wordIndex = Math.floor(new Date().getTime() / 86400000) % wordList.length;
 let {word, letters, length} = wordList[wordIndex];
 let currentGuess = '';
 letters = letters.split('');
